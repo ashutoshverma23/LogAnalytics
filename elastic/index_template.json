@@ -1,0 +1,18 @@
+{
+    "index_patterns": ["logs-*"],
+    "template": {
+      "settings": {
+        "number_of_shards": 1
+      },
+      "mappings": {
+        "properties": {
+          "level": { "type": "keyword" },
+          "count": { "type": "long" },
+          "timestamp": { "type": "date" },
+          "url": { "type": "keyword" },
+          "ip": { "type": "ip" },
+          "latency_ms": { "type": "integer" }
+        }
+      }
+    }
+  }
